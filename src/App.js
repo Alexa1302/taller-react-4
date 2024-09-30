@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+//EJERCICIO 3
+import React, { useState } from "react";
+import Formulario from "./Ejercicio3";
+import Resultado from "./Ejercicio3Resultado";
 
 function App() {
+  const [number, setNumber] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Formulario number={number} setNumber={setNumber} />
+      <Resultado number={number} />
     </div>
   );
 }
 
 export default App;
+
+//--------------------------------------------//
+//EJERCICIO 2
+// import React from "react";
+// import FormularioUsuario from "./Ejercicio2";
+
+// function App() {
+//   return (
+//     <div>
+//       <FormularioUsuario/>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+//------------------------------------------//
+//EJERCICIO 1
+// import React from "react";
+// import ButtonClick from "./Ejercicio1";
+
+// function App() {
+//     return (
+//       <div>
+//         <ButtonClick/>
+//       </div>
+//     );
+// }
+
+// export default App;
